@@ -8,6 +8,6 @@ You can directly transform queries by using the runnable JAR "StarqlToExaStream.
 
 Use of Parameters: StarqlToExaStream.jar [STARQLquery] [resultFile] [ontologyFile] [obdaFile]
 
-Execution Example: StarqlToExaStream.jar query1.txt result1.txt ontlrb.owl ontlrb.obdaFile
+Execution Example: StarqlToExaStream.jar query1.txt result1.txt ontlrb.owl ontlrb.obda
 
 Example Files can be found in folder "target/test-classes/".

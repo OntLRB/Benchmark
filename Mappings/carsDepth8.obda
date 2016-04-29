@@ -1,0 +1,1056 @@
+[PrefixDeclaration]
+:		http://www.siemens.com/Optique/UseCaseExample1#
+lrb:		http://www.ifis.uni-luebeck.de/LinearRoadBenchmark
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+uce:		http://www.siemens.com/Optique/UseCaseExample1#
+xml:		http://www.w3.org/XML/1998/namespace#
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[SourceDeclaration]
+sourceUri	UseCaseDB
+connectionUrl	jdbc:postgresql://localhost:5432/lrb
+username	postgres
+password	fischer
+driverClass	org.postgresql.Driver
+
+[MappingDeclaration] @collection [[
+
+mappingId	Mapping - isLeafCar
+target		lrb:{VID} :isLeafCar lrb:{CarLeafType} . 
+source		SELECT VID, CarLeafType FROM Cars
+
+mappingId	Mapping - hasAToll
+target		lrb:{VID} lrb:hasAToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 111 AS FinalToll FROM TollStr
+
+mappingId	Mapping - hasBToll
+target		lrb:{VID} lrb:hasBToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 222 AS FinalToll FROM TollStr
+
+mappingId	Mapping - 901
+target		lrb:{VID} a lrb:Car901 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 0
+
+mappingId	Mapping - 902
+target		lrb:{VID} a lrb:Car902 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 1
+
+mappingId	Mapping - 903
+target		lrb:{VID} a lrb:Car903 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 2
+
+mappingId	Mapping - 904
+target		lrb:{VID} a lrb:Car904 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 3
+
+mappingId	Mapping - 905
+target		lrb:{VID} a lrb:Car905 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 4
+
+mappingId	Mapping - 906
+target		lrb:{VID} a lrb:Car906 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 5
+
+mappingId	Mapping - 907
+target		lrb:{VID} a lrb:Car907 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 6
+
+mappingId	Mapping - 908
+target		lrb:{VID} a lrb:Car908 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 7
+
+mappingId	Mapping - 909
+target		lrb:{VID} a lrb:Car909 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 8
+
+mappingId	Mapping - 910
+target		lrb:{VID} a lrb:Car910 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 9
+
+mappingId	Mapping - 911
+target		lrb:{VID} a lrb:Car911 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 10
+
+mappingId	Mapping - 912
+target		lrb:{VID} a lrb:Car912 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 11
+
+mappingId	Mapping - 913
+target		lrb:{VID} a lrb:Car913 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 12
+
+mappingId	Mapping - 914
+target		lrb:{VID} a lrb:Car914 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 13
+
+mappingId	Mapping - 915
+target		lrb:{VID} a lrb:Car915 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 14
+
+mappingId	Mapping - 916
+target		lrb:{VID} a lrb:Car916 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 15
+
+mappingId	Mapping - 917
+target		lrb:{VID} a lrb:Car917 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 16
+
+mappingId	Mapping - 918
+target		lrb:{VID} a lrb:Car918 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 17
+
+mappingId	Mapping - 919
+target		lrb:{VID} a lrb:Car919 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 18
+
+mappingId	Mapping - 920
+target		lrb:{VID} a lrb:Car920 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 19
+
+mappingId	Mapping - 921
+target		lrb:{VID} a lrb:Car921 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 20
+
+mappingId	Mapping - 922
+target		lrb:{VID} a lrb:Car922 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 21
+
+mappingId	Mapping - 923
+target		lrb:{VID} a lrb:Car923 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 22
+
+mappingId	Mapping - 924
+target		lrb:{VID} a lrb:Car924 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 23
+
+mappingId	Mapping - 925
+target		lrb:{VID} a lrb:Car925 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 24
+
+mappingId	Mapping - 926
+target		lrb:{VID} a lrb:Car926 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 25
+
+mappingId	Mapping - 927
+target		lrb:{VID} a lrb:Car927 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 26
+
+mappingId	Mapping - 928
+target		lrb:{VID} a lrb:Car928 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 27
+
+mappingId	Mapping - 929
+target		lrb:{VID} a lrb:Car929 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 28
+
+mappingId	Mapping - 930
+target		lrb:{VID} a lrb:Car930 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 29
+
+mappingId	Mapping - 931
+target		lrb:{VID} a lrb:Car931 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 30
+
+mappingId	Mapping - 932
+target		lrb:{VID} a lrb:Car932 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 31
+
+mappingId	Mapping - 933
+target		lrb:{VID} a lrb:Car933 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 32
+
+mappingId	Mapping - 934
+target		lrb:{VID} a lrb:Car934 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 33
+
+mappingId	Mapping - 935
+target		lrb:{VID} a lrb:Car935 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 34
+
+mappingId	Mapping - 936
+target		lrb:{VID} a lrb:Car936 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 35
+
+mappingId	Mapping - 937
+target		lrb:{VID} a lrb:Car937 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 36
+
+mappingId	Mapping - 938
+target		lrb:{VID} a lrb:Car938 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 37
+
+mappingId	Mapping - 939
+target		lrb:{VID} a lrb:Car939 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 38
+
+mappingId	Mapping - 940
+target		lrb:{VID} a lrb:Car940 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 39
+
+mappingId	Mapping - 941
+target		lrb:{VID} a lrb:Car941 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 40
+
+mappingId	Mapping - 942
+target		lrb:{VID} a lrb:Car942 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 41
+
+mappingId	Mapping - 943
+target		lrb:{VID} a lrb:Car943 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 42
+
+mappingId	Mapping - 944
+target		lrb:{VID} a lrb:Car944 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 43
+
+mappingId	Mapping - 945
+target		lrb:{VID} a lrb:Car945 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 44
+
+mappingId	Mapping - 946
+target		lrb:{VID} a lrb:Car946 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 45
+
+mappingId	Mapping - 947
+target		lrb:{VID} a lrb:Car947 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 46
+
+mappingId	Mapping - 948
+target		lrb:{VID} a lrb:Car948 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 47
+
+mappingId	Mapping - 949
+target		lrb:{VID} a lrb:Car949 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 48
+
+mappingId	Mapping - 950
+target		lrb:{VID} a lrb:Car950 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 49
+
+mappingId	Mapping - 951
+target		lrb:{VID} a lrb:Car951 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 50
+
+mappingId	Mapping - 952
+target		lrb:{VID} a lrb:Car952 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 51
+
+mappingId	Mapping - 953
+target		lrb:{VID} a lrb:Car953 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 52
+
+mappingId	Mapping - 954
+target		lrb:{VID} a lrb:Car954 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 53
+
+mappingId	Mapping - 955
+target		lrb:{VID} a lrb:Car955 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 54
+
+mappingId	Mapping - 956
+target		lrb:{VID} a lrb:Car956 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 55
+
+mappingId	Mapping - 957
+target		lrb:{VID} a lrb:Car957 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 56
+
+mappingId	Mapping - 958
+target		lrb:{VID} a lrb:Car958 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 57
+
+mappingId	Mapping - 959
+target		lrb:{VID} a lrb:Car959 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 58
+
+mappingId	Mapping - 960
+target		lrb:{VID} a lrb:Car960 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 59
+
+mappingId	Mapping - 961
+target		lrb:{VID} a lrb:Car961 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 60
+
+mappingId	Mapping - 962
+target		lrb:{VID} a lrb:Car962 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 61
+
+mappingId	Mapping - 963
+target		lrb:{VID} a lrb:Car963 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 62
+
+mappingId	Mapping - 964
+target		lrb:{VID} a lrb:Car964 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 63
+
+mappingId	Mapping - 965
+target		lrb:{VID} a lrb:Car965 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 64
+
+mappingId	Mapping - 966
+target		lrb:{VID} a lrb:Car966 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 65
+
+mappingId	Mapping - 967
+target		lrb:{VID} a lrb:Car967 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 66
+
+mappingId	Mapping - 968
+target		lrb:{VID} a lrb:Car968 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 67
+
+mappingId	Mapping - 969
+target		lrb:{VID} a lrb:Car969 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 68
+
+mappingId	Mapping - 970
+target		lrb:{VID} a lrb:Car970 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 69
+
+mappingId	Mapping - 971
+target		lrb:{VID} a lrb:Car971 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 70
+
+mappingId	Mapping - 972
+target		lrb:{VID} a lrb:Car972 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 71
+
+mappingId	Mapping - 973
+target		lrb:{VID} a lrb:Car973 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 72
+
+mappingId	Mapping - 974
+target		lrb:{VID} a lrb:Car974 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 73
+
+mappingId	Mapping - 975
+target		lrb:{VID} a lrb:Car975 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 74
+
+mappingId	Mapping - 976
+target		lrb:{VID} a lrb:Car976 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 75
+
+mappingId	Mapping - 977
+target		lrb:{VID} a lrb:Car977 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 76
+
+mappingId	Mapping - 978
+target		lrb:{VID} a lrb:Car978 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 77
+
+mappingId	Mapping - 979
+target		lrb:{VID} a lrb:Car979 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 78
+
+mappingId	Mapping - 980
+target		lrb:{VID} a lrb:Car980 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 79
+
+mappingId	Mapping - 981
+target		lrb:{VID} a lrb:Car981 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 80
+
+mappingId	Mapping - 982
+target		lrb:{VID} a lrb:Car982 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 81
+
+mappingId	Mapping - 983
+target		lrb:{VID} a lrb:Car983 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 82
+
+mappingId	Mapping - 984
+target		lrb:{VID} a lrb:Car984 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 83
+
+mappingId	Mapping - 985
+target		lrb:{VID} a lrb:Car985 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 84
+
+mappingId	Mapping - 986
+target		lrb:{VID} a lrb:Car986 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 85
+
+mappingId	Mapping - 987
+target		lrb:{VID} a lrb:Car987 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 86
+
+mappingId	Mapping - 988
+target		lrb:{VID} a lrb:Car988 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 87
+
+mappingId	Mapping - 989
+target		lrb:{VID} a lrb:Car989 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 88
+
+mappingId	Mapping - 990
+target		lrb:{VID} a lrb:Car990 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 89
+
+mappingId	Mapping - 991
+target		lrb:{VID} a lrb:Car991 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 90
+
+mappingId	Mapping - 992
+target		lrb:{VID} a lrb:Car992 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 91
+
+mappingId	Mapping - 993
+target		lrb:{VID} a lrb:Car993 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 92
+
+mappingId	Mapping - 994
+target		lrb:{VID} a lrb:Car994 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 93
+
+mappingId	Mapping - 995
+target		lrb:{VID} a lrb:Car995 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 94
+
+mappingId	Mapping - 996
+target		lrb:{VID} a lrb:Car996 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 95
+
+mappingId	Mapping - 997
+target		lrb:{VID} a lrb:Car997 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 96
+
+mappingId	Mapping - 998
+target		lrb:{VID} a lrb:Car998 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 97
+
+mappingId	Mapping - 999
+target		lrb:{VID} a lrb:Car999 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 98
+
+mappingId	Mapping - 1000
+target		lrb:{VID} a lrb:Car1000 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 99
+
+mappingId	Mapping - 1001
+target		lrb:{VID} a lrb:Car1001 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 100
+
+mappingId	Mapping - 1002
+target		lrb:{VID} a lrb:Car1002 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 101
+
+mappingId	Mapping - 1003
+target		lrb:{VID} a lrb:Car1003 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 102
+
+mappingId	Mapping - 1004
+target		lrb:{VID} a lrb:Car1004 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 103
+
+mappingId	Mapping - 1005
+target		lrb:{VID} a lrb:Car1005 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 104
+
+mappingId	Mapping - 1006
+target		lrb:{VID} a lrb:Car1006 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 105
+
+mappingId	Mapping - 1007
+target		lrb:{VID} a lrb:Car1007 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 106
+
+mappingId	Mapping - 1008
+target		lrb:{VID} a lrb:Car1008 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 107
+
+mappingId	Mapping - 1009
+target		lrb:{VID} a lrb:Car1009 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 108
+
+mappingId	Mapping - 1010
+target		lrb:{VID} a lrb:Car1010 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 109
+
+mappingId	Mapping - 1011
+target		lrb:{VID} a lrb:Car1011 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 110
+
+mappingId	Mapping - 1012
+target		lrb:{VID} a lrb:Car1012 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 111
+
+mappingId	Mapping - 1013
+target		lrb:{VID} a lrb:Car1013 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 112
+
+mappingId	Mapping - 1014
+target		lrb:{VID} a lrb:Car1014 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 113
+
+mappingId	Mapping - 1015
+target		lrb:{VID} a lrb:Car1015 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 114
+
+mappingId	Mapping - 1016
+target		lrb:{VID} a lrb:Car1016 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 115
+
+mappingId	Mapping - 1017
+target		lrb:{VID} a lrb:Car1017 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 116
+
+mappingId	Mapping - 1018
+target		lrb:{VID} a lrb:Car1018 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 117
+
+mappingId	Mapping - 1019
+target		lrb:{VID} a lrb:Car1019 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 118
+
+mappingId	Mapping - 1020
+target		lrb:{VID} a lrb:Car1020 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 119
+
+mappingId	Mapping - 1021
+target		lrb:{VID} a lrb:Car1021 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 120
+
+mappingId	Mapping - 1022
+target		lrb:{VID} a lrb:Car1022 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 121
+
+mappingId	Mapping - 1023
+target		lrb:{VID} a lrb:Car1023 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 122
+
+mappingId	Mapping - 1024
+target		lrb:{VID} a lrb:Car1024 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 123
+
+mappingId	Mapping - 1025
+target		lrb:{VID} a lrb:Car1025 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 124
+
+mappingId	Mapping - 1026
+target		lrb:{VID} a lrb:Car1026 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 125
+
+mappingId	Mapping - 1027
+target		lrb:{VID} a lrb:Car1027 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 126
+
+mappingId	Mapping - 1028
+target		lrb:{VID} a lrb:Car1028 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 127
+
+mappingId	Mapping - 1029
+target		lrb:{VID} a lrb:Car1029 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 128
+
+mappingId	Mapping - 1030
+target		lrb:{VID} a lrb:Car1030 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 129
+
+mappingId	Mapping - 1031
+target		lrb:{VID} a lrb:Car1031 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 130
+
+mappingId	Mapping - 1032
+target		lrb:{VID} a lrb:Car1032 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 131
+
+mappingId	Mapping - 1033
+target		lrb:{VID} a lrb:Car1033 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 132
+
+mappingId	Mapping - 1034
+target		lrb:{VID} a lrb:Car1034 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 133
+
+mappingId	Mapping - 1035
+target		lrb:{VID} a lrb:Car1035 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 134
+
+mappingId	Mapping - 1036
+target		lrb:{VID} a lrb:Car1036 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 135
+
+mappingId	Mapping - 1037
+target		lrb:{VID} a lrb:Car1037 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 136
+
+mappingId	Mapping - 1038
+target		lrb:{VID} a lrb:Car1038 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 137
+
+mappingId	Mapping - 1039
+target		lrb:{VID} a lrb:Car1039 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 138
+
+mappingId	Mapping - 1040
+target		lrb:{VID} a lrb:Car1040 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 139
+
+mappingId	Mapping - 1041
+target		lrb:{VID} a lrb:Car1041 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 140
+
+mappingId	Mapping - 1042
+target		lrb:{VID} a lrb:Car1042 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 141
+
+mappingId	Mapping - 1043
+target		lrb:{VID} a lrb:Car1043 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 142
+
+mappingId	Mapping - 1044
+target		lrb:{VID} a lrb:Car1044 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 143
+
+mappingId	Mapping - 1045
+target		lrb:{VID} a lrb:Car1045 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 144
+
+mappingId	Mapping - 1046
+target		lrb:{VID} a lrb:Car1046 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 145
+
+mappingId	Mapping - 1047
+target		lrb:{VID} a lrb:Car1047 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 146
+
+mappingId	Mapping - 1048
+target		lrb:{VID} a lrb:Car1048 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 147
+
+mappingId	Mapping - 1049
+target		lrb:{VID} a lrb:Car1049 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 148
+
+mappingId	Mapping - 1050
+target		lrb:{VID} a lrb:Car1050 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 149
+
+mappingId	Mapping - 1051
+target		lrb:{VID} a lrb:Car1051 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 150
+
+mappingId	Mapping - 1052
+target		lrb:{VID} a lrb:Car1052 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 151
+
+mappingId	Mapping - 1053
+target		lrb:{VID} a lrb:Car1053 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 152
+
+mappingId	Mapping - 1054
+target		lrb:{VID} a lrb:Car1054 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 153
+
+mappingId	Mapping - 1055
+target		lrb:{VID} a lrb:Car1055 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 154
+
+mappingId	Mapping - 1056
+target		lrb:{VID} a lrb:Car1056 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 155
+
+mappingId	Mapping - 1057
+target		lrb:{VID} a lrb:Car1057 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 156
+
+mappingId	Mapping - 1058
+target		lrb:{VID} a lrb:Car1058 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 157
+
+mappingId	Mapping - 1059
+target		lrb:{VID} a lrb:Car1059 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 158
+
+mappingId	Mapping - 1060
+target		lrb:{VID} a lrb:Car1060 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 159
+
+mappingId	Mapping - 1061
+target		lrb:{VID} a lrb:Car1061 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 160
+
+mappingId	Mapping - 1062
+target		lrb:{VID} a lrb:Car1062 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 161
+
+mappingId	Mapping - 1063
+target		lrb:{VID} a lrb:Car1063 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 162
+
+mappingId	Mapping - 1064
+target		lrb:{VID} a lrb:Car1064 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 163
+
+mappingId	Mapping - 1065
+target		lrb:{VID} a lrb:Car1065 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 164
+
+mappingId	Mapping - 1066
+target		lrb:{VID} a lrb:Car1066 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 165
+
+mappingId	Mapping - 1067
+target		lrb:{VID} a lrb:Car1067 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 166
+
+mappingId	Mapping - 1068
+target		lrb:{VID} a lrb:Car1068 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 167
+
+mappingId	Mapping - 1069
+target		lrb:{VID} a lrb:Car1069 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 168
+
+mappingId	Mapping - 1070
+target		lrb:{VID} a lrb:Car1070 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 169
+
+mappingId	Mapping - 1071
+target		lrb:{VID} a lrb:Car1071 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 170
+
+mappingId	Mapping - 1072
+target		lrb:{VID} a lrb:Car1072 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 171
+
+mappingId	Mapping - 1073
+target		lrb:{VID} a lrb:Car1073 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 172
+
+mappingId	Mapping - 1074
+target		lrb:{VID} a lrb:Car1074 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 173
+
+mappingId	Mapping - 1075
+target		lrb:{VID} a lrb:Car1075 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 174
+
+mappingId	Mapping - 1076
+target		lrb:{VID} a lrb:Car1076 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 175
+
+mappingId	Mapping - 1077
+target		lrb:{VID} a lrb:Car1077 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 176
+
+mappingId	Mapping - 1078
+target		lrb:{VID} a lrb:Car1078 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 177
+
+mappingId	Mapping - 1079
+target		lrb:{VID} a lrb:Car1079 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 178
+
+mappingId	Mapping - 1080
+target		lrb:{VID} a lrb:Car1080 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 179
+
+mappingId	Mapping - 1081
+target		lrb:{VID} a lrb:Car1081 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 180
+
+mappingId	Mapping - 1082
+target		lrb:{VID} a lrb:Car1082 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 181
+
+mappingId	Mapping - 1083
+target		lrb:{VID} a lrb:Car1083 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 182
+
+mappingId	Mapping - 1084
+target		lrb:{VID} a lrb:Car1084 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 183
+
+mappingId	Mapping - 1085
+target		lrb:{VID} a lrb:Car1085 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 184
+
+mappingId	Mapping - 1086
+target		lrb:{VID} a lrb:Car1086 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 185
+
+mappingId	Mapping - 1087
+target		lrb:{VID} a lrb:Car1087 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 186
+
+mappingId	Mapping - 1088
+target		lrb:{VID} a lrb:Car1088 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 187
+
+mappingId	Mapping - 1089
+target		lrb:{VID} a lrb:Car1089 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 188
+
+mappingId	Mapping - 1090
+target		lrb:{VID} a lrb:Car1090 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 189
+
+mappingId	Mapping - 1091
+target		lrb:{VID} a lrb:Car1091 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 190
+
+mappingId	Mapping - 1092
+target		lrb:{VID} a lrb:Car1092 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 191
+
+mappingId	Mapping - 1093
+target		lrb:{VID} a lrb:Car1093 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 192
+
+mappingId	Mapping - 1094
+target		lrb:{VID} a lrb:Car1094 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 193
+
+mappingId	Mapping - 1095
+target		lrb:{VID} a lrb:Car1095 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 194
+
+mappingId	Mapping - 1096
+target		lrb:{VID} a lrb:Car1096 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 195
+
+mappingId	Mapping - 1097
+target		lrb:{VID} a lrb:Car1097 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 196
+
+mappingId	Mapping - 1098
+target		lrb:{VID} a lrb:Car1098 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 197
+
+mappingId	Mapping - 1099
+target		lrb:{VID} a lrb:Car1099 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 198
+
+mappingId	Mapping - 1100
+target		lrb:{VID} a lrb:Car1100 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 199
+
+mappingId	Mapping - 1101
+target		lrb:{VID} a lrb:Car1101 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 200
+
+mappingId	Mapping - 1102
+target		lrb:{VID} a lrb:Car1102 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 201
+
+mappingId	Mapping - 1103
+target		lrb:{VID} a lrb:Car1103 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 202
+
+mappingId	Mapping - 1104
+target		lrb:{VID} a lrb:Car1104 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 203
+
+mappingId	Mapping - 1105
+target		lrb:{VID} a lrb:Car1105 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 204
+
+mappingId	Mapping - 1106
+target		lrb:{VID} a lrb:Car1106 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 205
+
+mappingId	Mapping - 1107
+target		lrb:{VID} a lrb:Car1107 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 206
+
+mappingId	Mapping - 1108
+target		lrb:{VID} a lrb:Car1108 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 207
+
+mappingId	Mapping - 1109
+target		lrb:{VID} a lrb:Car1109 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 208
+
+mappingId	Mapping - 1110
+target		lrb:{VID} a lrb:Car1110 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 209
+
+mappingId	Mapping - 1111
+target		lrb:{VID} a lrb:Car1111 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 210
+
+mappingId	Mapping - 1112
+target		lrb:{VID} a lrb:Car1112 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 211
+
+mappingId	Mapping - 1113
+target		lrb:{VID} a lrb:Car1113 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 212
+
+mappingId	Mapping - 1114
+target		lrb:{VID} a lrb:Car1114 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 213
+
+mappingId	Mapping - 1115
+target		lrb:{VID} a lrb:Car1115 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 214
+
+mappingId	Mapping - 1116
+target		lrb:{VID} a lrb:Car1116 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 215
+
+mappingId	Mapping - 1117
+target		lrb:{VID} a lrb:Car1117 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 216
+
+mappingId	Mapping - 1118
+target		lrb:{VID} a lrb:Car1118 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 217
+
+mappingId	Mapping - 1119
+target		lrb:{VID} a lrb:Car1119 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 218
+
+mappingId	Mapping - 1120
+target		lrb:{VID} a lrb:Car1120 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 219
+
+mappingId	Mapping - 1121
+target		lrb:{VID} a lrb:Car1121 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 220
+
+mappingId	Mapping - 1122
+target		lrb:{VID} a lrb:Car1122 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 221
+
+mappingId	Mapping - 1123
+target		lrb:{VID} a lrb:Car1123 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 222
+
+mappingId	Mapping - 1124
+target		lrb:{VID} a lrb:Car1124 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 223
+
+mappingId	Mapping - 1125
+target		lrb:{VID} a lrb:Car1125 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 224
+
+mappingId	Mapping - 1126
+target		lrb:{VID} a lrb:Car1126 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 225
+
+mappingId	Mapping - 1127
+target		lrb:{VID} a lrb:Car1127 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 226
+
+mappingId	Mapping - 1128
+target		lrb:{VID} a lrb:Car1128 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 227
+
+mappingId	Mapping - 1129
+target		lrb:{VID} a lrb:Car1129 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 228
+
+mappingId	Mapping - 1130
+target		lrb:{VID} a lrb:Car1130 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 229
+
+mappingId	Mapping - 1131
+target		lrb:{VID} a lrb:Car1131 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 230
+
+mappingId	Mapping - 1132
+target		lrb:{VID} a lrb:Car1132 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 231
+
+mappingId	Mapping - 1133
+target		lrb:{VID} a lrb:Car1133 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 232
+
+mappingId	Mapping - 1134
+target		lrb:{VID} a lrb:Car1134 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 233
+
+mappingId	Mapping - 1135
+target		lrb:{VID} a lrb:Car1135 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 234
+
+mappingId	Mapping - 1136
+target		lrb:{VID} a lrb:Car1136 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 235
+
+mappingId	Mapping - 1137
+target		lrb:{VID} a lrb:Car1137 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 236
+
+mappingId	Mapping - 1138
+target		lrb:{VID} a lrb:Car1138 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 237
+
+mappingId	Mapping - 1139
+target		lrb:{VID} a lrb:Car1139 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 238
+
+mappingId	Mapping - 1140
+target		lrb:{VID} a lrb:Car1140 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 239
+
+mappingId	Mapping - 1141
+target		lrb:{VID} a lrb:Car1141 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 240
+
+mappingId	Mapping - 1142
+target		lrb:{VID} a lrb:Car1142 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 241
+
+mappingId	Mapping - 1143
+target		lrb:{VID} a lrb:Car1143 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 242
+
+mappingId	Mapping - 1144
+target		lrb:{VID} a lrb:Car1144 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 243
+
+mappingId	Mapping - 1145
+target		lrb:{VID} a lrb:Car1145 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 244
+
+mappingId	Mapping - 1146
+target		lrb:{VID} a lrb:Car1146 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 245
+
+mappingId	Mapping - 1147
+target		lrb:{VID} a lrb:Car1147 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 246
+
+mappingId	Mapping - 1148
+target		lrb:{VID} a lrb:Car1148 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 247
+
+mappingId	Mapping - 1149
+target		lrb:{VID} a lrb:Car1149 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 248
+
+mappingId	Mapping - 1150
+target		lrb:{VID} a lrb:Car1150 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 249
+
+mappingId	Mapping - 1151
+target		lrb:{VID} a lrb:Car1151 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 250
+
+mappingId	Mapping - 1152
+target		lrb:{VID} a lrb:Car1152 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 251
+
+mappingId	Mapping - 1153
+target		lrb:{VID} a lrb:Car1153 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 252
+
+mappingId	Mapping - 1154
+target		lrb:{VID} a lrb:Car1154 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 253
+
+mappingId	Mapping - 1155
+target		lrb:{VID} a lrb:Car1155 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 254
+
+mappingId	Mapping - 1156
+target		lrb:{VID} a lrb:Car1156 . 
+source		SELECT VID FROM TollStr WHERE VID % 256 = 255
+
+]]

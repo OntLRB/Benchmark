@@ -1,0 +1,16 @@
+PREFIX : <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#>
+CREATE PULSE pulseA WITH 
+	START = "0"^^XSD:integer,
+	END   = "3"^^XSD:integer,
+	FREQUENCY = "P1M"^^XSD:DURATION
+
+Create STREAM FinalTolls as 
+SELECT { ?VID (?Toll + 111) AS ?FinalToll }
+FROM STREAM TollStr [NOW, NOW]-> "PT1S"^^XSD:DURATION,
+STATIC ABOX <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark/car>,
+STATIC ABOX <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark/Type2Feature>
+USING PULSE pulseA
+WHERE {?VID a :Feature0 . ?VID a :Feature1 . ?VID a :Feature2 . ?VID a :Feature3 }
+SEQUENCE BY StdSeq AS SEQ1
+HAVING 
+EXISTS i in SEQ1 ( GRAPH i { ?VID :hasToll ?Toll } )

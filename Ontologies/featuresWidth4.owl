@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY quest "http://obda.org/quest#" >
+<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+ xml:base="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<owl:Ontology rdf:about="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"/>
+
+<owl:DatatypeProperty rdf:about="#hasToll">
+ <rdfs:domain rdf:resource="#Car"/>
+ <rdfs:range rdf:resource="&xsd;integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Car">
+</owl:Class>
+
+<owl:Class rdf:about="#Feature0">
+<rdfs:subClassOf rdf:resource="#Car"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature0">
+<rdfs:subClassOf rdf:resource="#Feature0"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature1">
+<rdfs:subClassOf rdf:resource="#Feature0"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Feature1">
+<rdfs:subClassOf rdf:resource="#Car"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature2">
+<rdfs:subClassOf rdf:resource="#Feature1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature3">
+<rdfs:subClassOf rdf:resource="#Feature1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Feature2">
+<rdfs:subClassOf rdf:resource="#Car"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature4">
+<rdfs:subClassOf rdf:resource="#Feature2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature5">
+<rdfs:subClassOf rdf:resource="#Feature2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Feature3">
+<rdfs:subClassOf rdf:resource="#Car"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature6">
+<rdfs:subClassOf rdf:resource="#Feature3"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SubFeature7">
+<rdfs:subClassOf rdf:resource="#Feature3"/>
+</owl:Class>
+
+</rdf:RDF>

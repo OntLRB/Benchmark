@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY quest "http://obda.org/quest#" >
+<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+ xml:base="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<owl:Ontology rdf:about="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"/>
+
+<owl:Class rdf:about="#Car1">
+</owl:Class>
+
+<owl:Class rdf:about="#Car201">
+<rdfs:subClassOf rdf:resource="#Car1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car301">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car401">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car402">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car403">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car404">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car405">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car406">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car407">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car408">
+<rdfs:subClassOf rdf:resource="#Car301"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car302">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car409">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car410">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car411">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car412">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car413">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car414">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car415">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car416">
+<rdfs:subClassOf rdf:resource="#Car302"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car303">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car417">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car418">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car419">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car420">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car421">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car422">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car423">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car424">
+<rdfs:subClassOf rdf:resource="#Car303"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car304">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car425">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car426">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car427">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car428">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car429">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car430">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car431">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car432">
+<rdfs:subClassOf rdf:resource="#Car304"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car202">
+<rdfs:subClassOf rdf:resource="#Car1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car305">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car433">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car434">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car435">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car436">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car437">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car438">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car439">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car440">
+<rdfs:subClassOf rdf:resource="#Car305"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car306">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car441">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car442">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car443">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car444">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car445">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car446">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car447">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car448">
+<rdfs:subClassOf rdf:resource="#Car306"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car307">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car449">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car450">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car451">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car452">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car453">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car454">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car455">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car456">
+<rdfs:subClassOf rdf:resource="#Car307"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car308">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car457">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car458">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car459">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car460">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car461">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car462">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car463">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car464">
+<rdfs:subClassOf rdf:resource="#Car308"/>
+</owl:Class>
+
+</rdf:RDF>

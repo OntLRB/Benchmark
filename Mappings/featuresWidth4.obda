@@ -1,0 +1,56 @@
+[PrefixDeclaration]
+:		http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#
+lrb:		http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+uce:		http://www.siemens.com/Optique/UseCaseExample1#
+xml:		http://www.w3.org/XML/1998/namespace#
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[SourceDeclaration]
+sourceUri	UseCaseDB
+connectionUrl	jdbc:postgresql://localhost:5432/lrb
+username	postgres
+password	postgres
+driverClass	org.postgresql.Driver
+
+[MappingDeclaration] @collection [[
+
+mappingId	Mapping - hasToll
+target		lrb:{VID} lrb:hasToll {Toll}. 
+source		SELECT VID, Toll FROM TollStr
+
+mappingId	Mapping - SubFeature0
+target		lrb:{VID} a lrb:SubFeature0 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 0
+
+mappingId	Mapping - SubFeature1
+target		lrb:{VID} a lrb:SubFeature1 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 1
+
+mappingId	Mapping - SubFeature2
+target		lrb:{VID} a lrb:SubFeature2 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 2
+
+mappingId	Mapping - SubFeature3
+target		lrb:{VID} a lrb:SubFeature3 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 3
+
+mappingId	Mapping - SubFeature4
+target		lrb:{VID} a lrb:SubFeature4 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 4
+
+mappingId	Mapping - SubFeature5
+target		lrb:{VID} a lrb:SubFeature5 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 5
+
+mappingId	Mapping - SubFeature6
+target		lrb:{VID} a lrb:SubFeature6 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 6
+
+mappingId	Mapping - SubFeature7
+target		lrb:{VID} a lrb:SubFeature7 .
+source		SELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = 7
+
+]]

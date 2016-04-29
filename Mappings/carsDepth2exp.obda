@@ -1,0 +1,64 @@
+[PrefixDeclaration]
+:		http://www.siemens.com/Optique/UseCaseExample1#
+lrb:		http://www.ifis.uni-luebeck.de/LinearRoadBenchmark
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+uce:		http://www.siemens.com/Optique/UseCaseExample1#
+xml:		http://www.w3.org/XML/1998/namespace#
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[SourceDeclaration]
+sourceUri	UseCaseDB
+connectionUrl	jdbc:postgresql://localhost:5432/lrb
+username	postgres
+password	fischer
+driverClass	org.postgresql.Driver
+
+[MappingDeclaration] @collection [[
+
+mappingId	Mapping - hasToll
+target		lrb:{VID} lrb:hasToll {Toll}. 
+source		SELECT VID, Toll FROM TollStr
+
+mappingId	Mapping - hasAToll
+target		lrb:{VID} lrb:hasAToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 111 AS FinalToll FROM TollStr
+
+mappingId	Mapping - hasBToll
+target		lrb:{VID} lrb:hasBToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 222 AS FinalToll FROM TollStr
+
+mappingId	Mapping - Car301
+target		lrb:{VID} a lrb:Car301 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car301'
+
+mappingId	Mapping - Car302
+target		lrb:{VID} a lrb:Car302 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car302'
+
+mappingId	Mapping - Car303
+target		lrb:{VID} a lrb:Car303 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car303'
+
+mappingId	Mapping - Car304
+target		lrb:{VID} a lrb:Car304 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car304'
+
+mappingId	Mapping - Car305
+target		lrb:{VID} a lrb:Car305 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car305'
+
+mappingId	Mapping - Car306
+target		lrb:{VID} a lrb:Car306 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car306'
+
+mappingId	Mapping - Car307
+target		lrb:{VID} a lrb:Car307 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car307'
+
+mappingId	Mapping - Car308
+target		lrb:{VID} a lrb:Car308 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car308'
+
+]]

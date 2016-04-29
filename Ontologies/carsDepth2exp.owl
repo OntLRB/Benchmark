@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY quest "http://obda.org/quest#" >
+<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+ xml:base="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<owl:Ontology rdf:about="http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#"/>
+
+<owl:DatatypeProperty rdf:about="#hasToll">
+ <rdfs:domain rdf:resource="#Car"/>
+ <rdfs:range rdf:resource="&xsd;integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Car1">
+</owl:Class>
+
+<owl:Class rdf:about="#Car201">
+<rdfs:subClassOf rdf:resource="#Car1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car301">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car302">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car303">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car304">
+<rdfs:subClassOf rdf:resource="#Car201"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car202">
+<rdfs:subClassOf rdf:resource="#Car1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car305">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car306">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car307">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Car308">
+<rdfs:subClassOf rdf:resource="#Car202"/>
+</owl:Class>
+
+</rdf:RDF>

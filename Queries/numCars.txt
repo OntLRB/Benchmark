@@ -1,0 +1,12 @@
+PREFIX : <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#>
+CREATE PULSE pulseA WITH 
+	START = "0"^^XSD:integer,
+	END =  "6"^^XSD:integer,
+	FREQUENCY = "P1M"^^XSD:DURATION
+
+Create STREAM NumCars as 
+SELECT { Count(?VID) AS ?NumCars }
+FROM STREAM TollStr [NOW - "PT30S"^^XSD:DURATION, NOW]-> "PT31S"^^XSD:DURATION
+USING PULSE pulseA
+SEQUENCE BY StdSeq AS SEQ1
+HAVING EXISTS i IN SEQ1 ( GRAPH i { ?VID :hasToll ?toll} )

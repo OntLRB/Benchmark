@@ -1,0 +1,12 @@
+PREFIX : <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#>
+CREATE PULSE pulseA WITH 
+	START = "0"^^XSD:integer,
+	END =   "10784"^^XSD:integer,
+	FREQUENCY = "P1M"^^XSD:DURATION
+
+CREATE STREAM MovingAverage AS
+SELECT { AVG(?Toll) AS ?AvgToll }
+FROM STREAM TollStr [NOW - "P200S"^^XSD:DURATION, NOW]-> "P201S"^^XSD:DURATION
+USING PULSE pulseA
+SEQUENCE BY StdSeq as SEQ1
+HAVING EXISTS i in SEQ1 ( GRAPH i {?VID :hasToll ?toll } )

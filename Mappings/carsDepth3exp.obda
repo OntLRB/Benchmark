@@ -1,0 +1,284 @@
+[PrefixDeclaration]
+:		http://www.siemens.com/Optique/UseCaseExample1#
+lrb:		http://www.ifis.uni-luebeck.de/LinearRoadBenchmark
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+uce:		http://www.siemens.com/Optique/UseCaseExample1#
+xml:		http://www.w3.org/XML/1998/namespace#
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[SourceDeclaration]
+sourceUri	UseCaseDB
+connectionUrl	jdbc:postgresql://localhost:5432/lrb
+username	postgres
+password	fischer
+driverClass	org.postgresql.Driver
+
+[MappingDeclaration] @collection [[
+
+mappingId	Mapping - hasAToll
+target		lrb:{VID} lrb:hasAToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 111 AS FinalToll FROM TollStr
+
+mappingId	Mapping - hasBToll
+target		lrb:{VID} lrb:hasBToll {FinalToll}^^xsd:integer . 
+source		SELECT VID, Toll + 222 AS FinalToll FROM TollStr
+
+mappingId	Mapping - Car401
+target		lrb:{VID} a lrb:Car401 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car401'
+
+mappingId	Mapping - Car402
+target		lrb:{VID} a lrb:Car402 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car402'
+
+mappingId	Mapping - Car403
+target		lrb:{VID} a lrb:Car403 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car403'
+
+mappingId	Mapping - Car404
+target		lrb:{VID} a lrb:Car404 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car404'
+
+mappingId	Mapping - Car405
+target		lrb:{VID} a lrb:Car405 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car405'
+
+mappingId	Mapping - Car406
+target		lrb:{VID} a lrb:Car406 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car406'
+
+mappingId	Mapping - Car407
+target		lrb:{VID} a lrb:Car407 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car407'
+
+mappingId	Mapping - Car408
+target		lrb:{VID} a lrb:Car408 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car408'
+
+mappingId	Mapping - Car409
+target		lrb:{VID} a lrb:Car409 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car409'
+
+mappingId	Mapping - Car410
+target		lrb:{VID} a lrb:Car410 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car410'
+
+mappingId	Mapping - Car411
+target		lrb:{VID} a lrb:Car411 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car411'
+
+mappingId	Mapping - Car412
+target		lrb:{VID} a lrb:Car412 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car412'
+
+mappingId	Mapping - Car413
+target		lrb:{VID} a lrb:Car413 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car413'
+
+mappingId	Mapping - Car414
+target		lrb:{VID} a lrb:Car414 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car414'
+
+mappingId	Mapping - Car415
+target		lrb:{VID} a lrb:Car415 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car415'
+
+mappingId	Mapping - Car416
+target		lrb:{VID} a lrb:Car416 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car416'
+
+mappingId	Mapping - Car417
+target		lrb:{VID} a lrb:Car417 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car417'
+
+mappingId	Mapping - Car418
+target		lrb:{VID} a lrb:Car418 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car418'
+
+mappingId	Mapping - Car419
+target		lrb:{VID} a lrb:Car419 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car419'
+
+mappingId	Mapping - Car420
+target		lrb:{VID} a lrb:Car420 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car420'
+
+mappingId	Mapping - Car421
+target		lrb:{VID} a lrb:Car421 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car421'
+
+mappingId	Mapping - Car422
+target		lrb:{VID} a lrb:Car422 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car422'
+
+mappingId	Mapping - Car423
+target		lrb:{VID} a lrb:Car423 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car423'
+
+mappingId	Mapping - Car424
+target		lrb:{VID} a lrb:Car424 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car424'
+
+mappingId	Mapping - Car425
+target		lrb:{VID} a lrb:Car425 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car425'
+
+mappingId	Mapping - Car426
+target		lrb:{VID} a lrb:Car426 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car426'
+
+mappingId	Mapping - Car427
+target		lrb:{VID} a lrb:Car427 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car427'
+
+mappingId	Mapping - Car428
+target		lrb:{VID} a lrb:Car428 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car428'
+
+mappingId	Mapping - Car429
+target		lrb:{VID} a lrb:Car429 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car429'
+
+mappingId	Mapping - Car430
+target		lrb:{VID} a lrb:Car430 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car430'
+
+mappingId	Mapping - Car431
+target		lrb:{VID} a lrb:Car431 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car431'
+
+mappingId	Mapping - Car432
+target		lrb:{VID} a lrb:Car432 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car432'
+
+mappingId	Mapping - Car433
+target		lrb:{VID} a lrb:Car433 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car433'
+
+mappingId	Mapping - Car434
+target		lrb:{VID} a lrb:Car434 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car434'
+
+mappingId	Mapping - Car435
+target		lrb:{VID} a lrb:Car435 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car435'
+
+mappingId	Mapping - Car436
+target		lrb:{VID} a lrb:Car436 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car436'
+
+mappingId	Mapping - Car437
+target		lrb:{VID} a lrb:Car437 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car437'
+
+mappingId	Mapping - Car438
+target		lrb:{VID} a lrb:Car438 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car438'
+
+mappingId	Mapping - Car439
+target		lrb:{VID} a lrb:Car439 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car439'
+
+mappingId	Mapping - Car440
+target		lrb:{VID} a lrb:Car440 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car440'
+
+mappingId	Mapping - Car441
+target		lrb:{VID} a lrb:Car441 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car441'
+
+mappingId	Mapping - Car442
+target		lrb:{VID} a lrb:Car442 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car442'
+
+mappingId	Mapping - Car443
+target		lrb:{VID} a lrb:Car443 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car443'
+
+mappingId	Mapping - Car444
+target		lrb:{VID} a lrb:Car444 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car444'
+
+mappingId	Mapping - Car445
+target		lrb:{VID} a lrb:Car445 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car445'
+
+mappingId	Mapping - Car446
+target		lrb:{VID} a lrb:Car446 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car446'
+
+mappingId	Mapping - Car447
+target		lrb:{VID} a lrb:Car447 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car447'
+
+mappingId	Mapping - Car448
+target		lrb:{VID} a lrb:Car448 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car448'
+
+mappingId	Mapping - Car449
+target		lrb:{VID} a lrb:Car449 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car449'
+
+mappingId	Mapping - Car450
+target		lrb:{VID} a lrb:Car450 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car450'
+
+mappingId	Mapping - Car451
+target		lrb:{VID} a lrb:Car451 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car451'
+
+mappingId	Mapping - Car452
+target		lrb:{VID} a lrb:Car452 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car452'
+
+mappingId	Mapping - Car453
+target		lrb:{VID} a lrb:Car453 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car453'
+
+mappingId	Mapping - Car454
+target		lrb:{VID} a lrb:Car454 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car454'
+
+mappingId	Mapping - Car455
+target		lrb:{VID} a lrb:Car455 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car455'
+
+mappingId	Mapping - Car456
+target		lrb:{VID} a lrb:Car456 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car456'
+
+mappingId	Mapping - Car457
+target		lrb:{VID} a lrb:Car457 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car457'
+
+mappingId	Mapping - Car458
+target		lrb:{VID} a lrb:Car458 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car458'
+
+mappingId	Mapping - Car459
+target		lrb:{VID} a lrb:Car459 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car459'
+
+mappingId	Mapping - Car460
+target		lrb:{VID} a lrb:Car460 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car460'
+
+mappingId	Mapping - Car461
+target		lrb:{VID} a lrb:Car461 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car461'
+
+mappingId	Mapping - Car462
+target		lrb:{VID} a lrb:Car462 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car462'
+
+mappingId	Mapping - Car463
+target		lrb:{VID} a lrb:Car463 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car463'
+
+mappingId	Mapping - Car464
+target		lrb:{VID} a lrb:Car464 . 
+source		SELECT VID, 'CarLeafType' FROM Cars WHERE CarLeafType = 'Car464'
+
+]]

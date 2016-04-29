@@ -1,0 +1,34 @@
+PREFIX : <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark#>
+CREATE PULSE pulseA WITH 
+	START = "0"^^XSD:integer,
+	END =  "10"^^XSD:integer,
+	FREQUENCY = "P1M"^^XSD:DURATION
+
+Create STREAM FinalTollsA as
+CONSTRUCT GRAPH NOW { ?VID :hasToll ?FinalToll }
+FROM STREAM TollStr [NOW, NOW]-> "PT1S"^^XSD:DURATION,
+STATIC ABOX <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark/cars>
+USING PULSE pulseA
+WHERE {?VID a :Car201}
+SEQUENCE BY StdSeq AS SEQ1
+HAVING 
+EXISTS i in SEQ1 ( GRAPH i { ?VID :hasAToll ?FinalToll } )
+
+Create STREAM FinalTollsB as 
+CONSTRUCT GRAPH NOW { ?VID :hasToll ?FinalToll }
+FROM STREAM TollStr [NOW, NOW]-> "PT1S"^^XSD:DURATION,
+STATIC ABOX <http://www.ifis.uni-luebeck.de/LinearRoadBenchmark/cars>
+USING PULSE pulseA
+WHERE {?VID a :Car202}
+SEQUENCE BY StdSeq AS SEQ1
+HAVING 
+EXISTS i in SEQ1 ( GRAPH i { ?VID :hasBToll ?FinalToll } )
+
+Create STREAM FinalTolls as 
+SELECT { ?VID ?FinalToll }
+FROM STREAM FinalTollsA  [NOW, NOW]-> "PT1S"^^XSD:DURATION,
+FinalTollsB  [NOW, NOW]-> "PT1S"^^XSD:DURATION
+USING PULSE pulseA
+SEQUENCE BY StdSeq AS SEQ1
+HAVING 
+EXISTS i in SEQ1 ( GRAPH i { ?VID :hasToll ?FinalToll } )

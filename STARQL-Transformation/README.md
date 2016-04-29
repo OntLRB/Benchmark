@@ -4,4 +4,10 @@ This is a transformation service for transforming STARQL queries into ExaStream
 
 ## Installation instruction
 
-This is how you install it
+You can directly transform queries by using the runnable JAR "StarqlToExaStream.jar" provided in this folder.
+
+Use of Parameters: StarqlToExaStream.jar [STARQLquery] [resultFile] [ontologyFile] [obdaFile]
+
+Execution Example: StarqlToExaStream.jar query1.txt result1.txt ontlrb.owl ontlrb.obdaFile
+
+Example Files can be found in folder "target/test-classes/".

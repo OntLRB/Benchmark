@@ -1,10 +1,14 @@
 # OntLRB Benchmark
 
-This is the OntLRB benchmark
+The linear road benchmark LRB is a well documented test suit for relational
+data stream systems in a configurable trafic scenario. This work
+describes an extension of LRB, called OntLRB, which aims at making
+the classical LRB available for the semantically enhanced stream-engines
+community. OntLRB extends LRB with additional benchmarking aspects
+regarding the semantics of the data, in particular aspects related
+to inference and, further, reasoning in the ontology-based data access
+paradigm (OBDA).
 
-## Installation instruction
-
-This is how you install it
 
 ## Running the Benchmark
 

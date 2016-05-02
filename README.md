@@ -32,7 +32,7 @@ Run the LRB queries in the Madis/Exareme terminal.
 ### Run the classic Linear Road Benchmark
 ```sql
 OUTPUT file:bal.csv delimiter:, select 2, Time, cast(Emit AS int) AS Emit, QID, Bal, 0 AS ResultTime
-FROM (lrb start:0 end:1999 SELECT * FROM AccBalOutStr);
+FROM (lrb start:0 end:10784 SELECT * FROM AccBalOutStr);
 
 OUTPUT file:accalert.csv delimiter:, SELECT 1, Time, Emit, VID, AccSeg FROM (lrb start:0 end:10784
 SELECT * FROM AccNotifyStr);
@@ -40,6 +40,7 @@ SELECT * FROM AccNotifyStr);
 OUTPUT file:tollalert.csv delimiter:, SELECT 0, VID, Time, Emit, AvgSpd as Spd, Toll FROM
 (lrb start:0 end:10784 SELECT * FROM TollStr);
 ```
+The generated output files can be validated with the validator from [LRB](http://www.cs.brandeis.edu/~linearroad/tools.html).
 
 ### Run an ontology extended benchmark
 Unfold a query from STARQL to ExaStream. For example:

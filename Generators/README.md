@@ -1,6 +1,6 @@
 ## Generators
 -----------
-Scripts in this folders are used to genereate ontology and mapping files. Each generator expexts one parameter, the number of levels for car ontologies or the width of the feature ontology respectively.
+Scripts in this folders are used to generate ontology and mapping files. Each generator expects one parameter, the number of levels for car ontologies or the width of the feature ontology respectively.
 
 The command
 ```javascript

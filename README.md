@@ -22,14 +22,14 @@ python exareme/lib/madis/src/mterm.py my.db
 Use the [LRB data generator](http://www.cs.brandeis.edu/~linearroad/tools.html) to
 create historical tolls and cardatapoints. To skip this step, Uppala University
 provides these files for one express way [here](http://udbl2.it.uu.se/LR/). Secondly,
-use the script *makeAllSeg.sh* to generate segment for the any number of expressways.
+use the script *makeAllSeg.sh* to generate segment for any number of expressways.
 The file AllSeg.csv has data for two expressways by now.
 Thirdly, adjust the queries found in *lrb.sql* in the folder **LRB-for-ExaSteam**
 to your environment. Update paths to point to your car data files.
 Run the LRB queries in the Madis/Exareme terminal.
 
 
-### Run the classic benchmark
+### Run the classic Linear Road Benchmark
 ```sql
 OUTPUT file:bal.csv delimiter:, select 2, Time, cast(Emit AS int) AS Emit, QID, Bal, 0 AS ResultTime
 FROM (lrb start:0 end:1999 SELECT * FROM AccBalOutStr);
@@ -45,8 +45,8 @@ OUTPUT file:tollalert.csv delimiter:, SELECT 0, VID, Time, Emit, AvgSpd as Spd, 
 Unfold a query from STARQL to ExaStream. For example:
 ```java
 StarqlToExaStream.jar featureQuery.txt ExaStreamResult.txt
-Ontologies/featuresWidth4.owl Mappings/featuresWidth4.obda```
-
+Ontologies/featuresWidth4.owl Mappings/featuresWidth4.obda
+```
 Run the queries found in ExaStreamResult.txt in the Madis/Exareme terminal.
 On successful execution, run the actual benchmark with such a command:
 ```sql

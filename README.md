@@ -22,8 +22,8 @@ python exareme/lib/madis/src/mterm.py my.db
 Use the [LRB data generator](http://www.cs.brandeis.edu/~linearroad/tools.html) to
 create historical tolls and cardatapoints. To skip this step, Uppala University
 provides these files for one express way [here](http://udbl2.it.uu.se/LR/). Secondly,
-use the script *makeAllSeg.sh* to generate segment for any number of expressways.
-The file AllSeg.csv has data for two expressways by now.
+use the script *makeAllSeg.sh* to generate segment data for any number of expressways.
+The file AllSeg.csv contains data for up to two expressways by now.
 Thirdly, adjust the queries found in *lrb.sql* in the folder **LRB-for-ExaSteam**
 to your environment. Update paths to point to your car data files.
 Run the LRB queries in the Madis/Exareme terminal.

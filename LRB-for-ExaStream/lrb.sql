@@ -240,9 +240,8 @@ E.VID = T.VID AND E.Day = T.Day GROUP BY E.VID, E.Day;
 -- OUTPUT file:tollalert.csv delimiter:, SELECT 0, VID, Time, Emit, AvgSpd as Spd, Toll FROM (lrb start:0 end:10784 SELECT * FROM TollStr);
 -- OUTPUT file:daily.csv delimiter:, SELECT 3, Time, Emit, QID, Bal FROM (lrb start:0 end:10784 SELECT * FROM ExpOutStr);
 -- OUTPUT file:measurementToll.csv delimiter:, SELECT Time, Emit-Time AS Delay, NumCars FROM (lrb start:0 end:10 SELECT VID, Time, Count(DISTINCT VID) AS NumCars FROM TollStr);
+-- OUTPUT file:tollalert.csv delimiter:, SELECT Time, Emit-Time AS Delay, NumCars FROM (lrb start:0 end:10784 SELECT wid as Time, Count(DISTINCT _VID) AS NumCars FROM TollStr_having);
 -- OUTPUT file:featuresWidth4.csv delimiter:, SELECT Time, ifnull(Emit-Time,0) AS Delay, NumCars FROM (lrb start:0 end:10784 SELECT _vid AS VID, wid AS Time, Count(DISTINCT _vid) AS NumCars FROM FinalTolls_having);
--- OUTPUT file:car57441tolls.csv delimiter:, SELECT * FROM (lrb start:0 end:10784 SELECT * FROM tollstr where vid = 57441);
-
 
 -----------------------------
 -- Static Cars Binary Experiment

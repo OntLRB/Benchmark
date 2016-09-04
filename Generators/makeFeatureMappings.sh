@@ -24,22 +24,29 @@ driverClass	org.postgresql.Driver
 [MappingDeclaration] @collection [[
 
 mappingId	Mapping - hasToll
-target		lrb:{VID} lrb:hasToll {Toll}. 
+target		lrb:{VID} lrb:hasToll {Toll}.
 source		SELECT VID, Toll FROM TollStr
 EOM
 echo "$HEAD"
 printf "\n"
-for n in `seq 0 $(($width-1))`;
+for feature in `seq 0 $(($width-1))`;
 do
-	leftSubFeature=$((2*n))
+	leftSubFeature=$((2*feature))
 	rightSubFeature=$((leftSubFeature+1))
+	F=Feature$feature
+	hasF=has$F
 	lSF=SubFeature$leftSubFeature
 	rSF=SubFeature$rightSubFeature
-	printf "mappingId\tMapping - $lSF\n"
-	printf "target\t\tlrb:{VID} a lrb:$lSF .\n"
-	printf "source\t\tSELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = $(($leftSubFeature))\n\n"
-	printf "mappingId\tMapping - $rSF\n"
-	printf "target\t\tlrb:{VID} a lrb:$rSF .\n"
-	printf "source\t\tSELECT VID FROM Type2Feature F JOIN Car C ON F.Cartype = C.Cartype WHERE F.Subfeature = $(($rightSubFeature))\n\n"
+	subHasL=hasSubFeature$leftSubFeature
+  subHasR=hasSubFeature$rightSubFeature
+	printf "mappingId\tMapping - $hasF\n"
+	printf "target\t\tlrb:{VID} :$hasF lrb:$F .\n"
+	printf "source\t\tSELECT VID, $F FROM \"$hasF\"\n\n"
+	printf "mappingId\tMapping - $subHasL\n"
+	printf "target\t\tlrb:{$F} :$subHasL lrb:$lSF .\n"
+	printf "source\t\tSELECT $F, $lSF FROM \"$subHasL\"\n\n"
+	printf "mappingId\tMapping - $subHasR\n"
+	printf "target\t\tlrb:{$F} :$subHasR lrb:$rSF .\n"
+	printf "source\t\tSELECT $F, $rSF FROM \"$subHasR\"\n\n"
 done
 echo "]]"

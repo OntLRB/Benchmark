@@ -25,7 +25,7 @@ read -r -d '' HEAD <<- EOM
  <rdfs:range rdf:resource="&xsd;integer"/>
 </owl:DatatypeProperty>
 
-<owl:Class rdf:about="#Car">
+<owl:Class rdf:about="#VID">
 </owl:Class>
 EOM
 echo "$HEAD"
@@ -34,8 +34,12 @@ for feature in `seq 0 $(($width-1))`;
 do
 	leftSubFeature=$((2*feature))
 	rightSubFeature=$((leftSubFeature+1))
-	printf "<owl:Class rdf:about=\"#Feature$feature\">\n<rdfs:subClassOf rdf:resource=\"#Car\"/>\n</owl:Class>\n\n"
-	printf "<owl:Class rdf:about=\"#SubFeature$leftSubFeature\">\n<rdfs:subClassOf rdf:resource=\"#Feature$feature\"/>\n</owl:Class>\n\n"
-	printf "<owl:Class rdf:about=\"#SubFeature$rightSubFeature\">\n<rdfs:subClassOf rdf:resource=\"#Feature$feature\"/>\n</owl:Class>\n\n"
-done    
+  F=Feature$feature
+  subHasL=hasSubFeature$leftSubFeature
+  subHasR=hasSubFeature$rightSubFeature
+	printf "<owl:Class rdf:about=\"#$F\">\n</owl:Class>\n\n"
+  printf "<owl:ObjectProperty rdf:about=\"#has$F\">\n<rdfs:domain rdf:resource=\"#VID\"/>\n<rdfs:range rdf:resource=\"#$F\"/>\n</owl:ObjectProperty>\n\n"
+	printf "<owl:ObjectProperty rdf:about=\"#$subHasL\">\n<rdfs:subPropertyOf rdf:resource=\"#has$F\"/>\n</owl:ObjectProperty>\n\n"
+	printf "<owl:ObjectProperty rdf:about=\"#$subHasR\">\n<rdfs:subPropertyOf rdf:resource=\"#has$F\"/>\n</owl:ObjectProperty>\n\n"
+done
 echo "</rdf:RDF>"
